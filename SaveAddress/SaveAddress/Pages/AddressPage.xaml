@@ -4,9 +4,21 @@
              x:Class="SaveAddress.Pages.AddressPage">
     <ContentPage.Content>
         <StackLayout>
+            
             <Label Text="Welcome to Address"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+
+
+            <Label Text="Welcome to Address"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+
+            <Label Text="Welcome to Address"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

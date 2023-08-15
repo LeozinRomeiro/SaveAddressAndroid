@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace SaveAddress.Pages
@@ -14,7 +15,7 @@ namespace SaveAddress.Pages
         public AbaFlyoutPage flyoutPage;
         public MainPage()
         {
-            object value = InitializeComponent();
+            InitializeComponent();
             flyoutPage = new AbaFlyoutPage();
             Flyout = flyoutPage;
             Detail = new NavigationPage(new SobrePage());
@@ -24,6 +25,19 @@ namespace SaveAddress.Pages
         {
             Detail = new NavigationPage(page);
             IsPresented = false;
+        }
+        public Task<Location> Localizar()
+        {
+            return Geolocation.GetLocationAsync(new GeolocationRequest()
+            { DesiredAccuracy = GeolocationAccuracy.Best });
+        }
+        public async Task Mostrar()
+        {
+            var localizacao = await Localizar();
+            var localizacao_info = new Location(localizacao.Latitude, localizacao.Longitude);
+            var opcao = new MapLaunchOptions();
+            opcao.Name += "Meu local";
+            await Map.OpenAsync(localizacao_info, opcao);
         }
     }
 }
