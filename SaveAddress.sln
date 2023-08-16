@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveAddress.Android", "SaveAddress\SaveAddress.Android\SaveAddress.Android.csproj", "{AA1AB41C-7A3A-459D-A14D-140BBD33D465}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveAddress", "SaveAddress\SaveAddress\SaveAddress.csproj", "{A1A7A6E3-1119-42D6-8761-39D8D749D5B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SaveAddress", "SaveAddress\SaveAddress\SaveAddress.csproj", "{A1A7A6E3-1119-42D6-8761-39D8D749D5B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
