@@ -6,10 +6,10 @@ using System.Text;
 
 namespace SaveAddress.DataBase
 {
-    public class DataBase 
+    public class DataBaseClass
     {
         SQLiteConnection SQLiteConnection { get; }
-        public DataBase(SQLiteConnection SQLiteConnection)
+        public DataBaseClass(SQLiteConnection SQLiteConnection)
         {
             this.SQLiteConnection = SQLiteConnection;
             SQLiteConnection.CreateTable<Localizacao>();
