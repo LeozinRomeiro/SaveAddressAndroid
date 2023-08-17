@@ -18,7 +18,7 @@ namespace SaveAddress.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             string DataBase = "DataBaseAddress.db3";
-            string DataBasePath = AjudaAcessarArquivo.LerLocalArquivoDataBase(DataBase);
+            SQLiteConnection DataBasePath = AjudaAcessarArquivo.LerLocalArquivoDataBase(DataBase);
             LoadApplication(new App(DataBasePath, DataBase));
 
         }

@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,10 +17,11 @@ namespace SaveAddress.Droid
 {
     public class AjudaAcessarArquivo
     {
-        public static string LerLocalArquivoDataBase(string arquivo)
+        public static SQLiteConnection LerLocalArquivoDataBase(string arquivo)
         {
-            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            return System.IO.Path.Combine(path, arquivo);
+            string caminho = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            SQLiteConnection path = new SQLiteConnection(System.IO.Path.Combine(caminho, arquivo));
+            return path;
         }
 
     }
