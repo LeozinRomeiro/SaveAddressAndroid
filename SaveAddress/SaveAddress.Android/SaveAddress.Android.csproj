@@ -85,13 +85,16 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
+    <AndroidResource Include="Resources\drawable\address.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SaveAddress\SaveAddress.csproj">
       <Project>{ADBC4EE5-2C47-44EF-9021-77333B38CC91}</Project>
       <Name>SaveAddress</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\address.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SaveAddress.Pages.AbaFlyoutPage">
+             x:Class="SaveAddress.Pages.AbaFlyoutPage" Title="Menu">
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
             <Image Source="esqueci2" HorizontalOptions="Center"/>
             <Label Text="Esqueci" FontSize="Large" HorizontalOptions="Center" Margin="0,0,0,50"/>
 
             <StackLayout Orientation="Horizontal">
-                <ImageButton x:Name="botao_enderecos" Clicked="botao_enderecos_Clicked"/>
+                <ImageButton Source="address" x:Name="botao_enderecos" Clicked="botao_enderecos_Clicked" HeightRequest="150" WidthRequest="150" Background="transparent"/>
                 <Label Text="Endereços"/>
 
             </StackLayout>
