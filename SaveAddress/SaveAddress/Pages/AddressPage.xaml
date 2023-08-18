@@ -4,20 +4,24 @@
              x:Class="SaveAddress.Pages.AddressPage">
     <ContentPage.Content>
         <StackLayout>
+
+            <StackLayout>
+                <ImageButton Source=""/>
+            </StackLayout>
             
-            <Label Text="Welcome to Address"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-
-
-            <Label Text="Welcome to Address"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-
-
-            <Label Text="Welcome to Address"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout>
+                <ListView x:Name="ListAddress" HasUnevenRows="True" SeparatorColor="Red" Margin="15" ItemSelected="ListAddress_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{Binding Titulo,StringFormat='Título: {0}'}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
             
         </StackLayout>
     </ContentPage.Content>

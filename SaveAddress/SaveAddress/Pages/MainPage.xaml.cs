@@ -18,7 +18,7 @@ namespace SaveAddress.Pages
             InitializeComponent();
             flyoutPage = new AbaFlyoutPage();
             Flyout = flyoutPage;
-            Detail = new NavigationPage(new SobrePage());
+            Detail = new NavigationPage(new HomePage());
         }
 
         public void Navegar(ContentPage page)
@@ -39,5 +39,6 @@ namespace SaveAddress.Pages
             opcao.Name += "Meu local";
             await Map.OpenAsync(localizacao_info, opcao);
         }
+        
     }
 }

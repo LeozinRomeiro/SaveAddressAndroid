@@ -4,9 +4,8 @@
              x:Class="SaveAddress.Pages.HomePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="textoNome" />
+            <Button x:Name="Salvar" Clicked="Salvar_Clicked" Text="Salvar"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
