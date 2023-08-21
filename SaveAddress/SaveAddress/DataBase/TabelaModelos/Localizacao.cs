@@ -10,7 +10,7 @@ namespace SaveAddress.DataBase.TabelaModelos
     {
         [PrimaryKey, AutoIncrement] public int Id { get; set; } = 0;
         [NotNull] public string Nome { get; set; } = string.Empty;
-        [NotNull] public string Latitude { get; set;} = string.Empty;
-        [NotNull] public string Longitude { get; set; } = string.Empty;
+        [NotNull] public double Latitude { get; set;} = 0;
+        [NotNull] public double Longitude { get; set; } = 0;
     }
 }

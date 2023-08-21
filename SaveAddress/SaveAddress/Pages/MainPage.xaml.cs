@@ -1,4 +1,5 @@
-﻿using SaveAddress.Pages;
+﻿using SaveAddress.DataBase.TabelaModelos;
+using SaveAddress.Pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,8 @@ namespace SaveAddress.Pages
 
         public void Navegar(ContentPage page)
         {
-            Detail = new NavigationPage(page);
+            FlyoutPage flyoutPage = (FlyoutPage)Application.Current.MainPage;
+            flyoutPage.Detail = new NavigationPage(page);
             IsPresented = false;
         }
         public Task<Location> Localizar()
@@ -39,6 +41,14 @@ namespace SaveAddress.Pages
             opcao.Name += "Meu local";
             await Map.OpenAsync(localizacao_info, opcao);
         }
-        
+
+        public async Task Mostrar(Localizacao localizacao)
+        {
+            var localizacao_info = new Location(localizacao.Latitude, localizacao.Longitude);
+            var opcao = new MapLaunchOptions();
+            opcao.Name += "Meu local";
+            await Map.OpenAsync(localizacao_info, opcao);
+        }
+
     }
 }

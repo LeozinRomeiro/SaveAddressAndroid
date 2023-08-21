@@ -13,9 +13,8 @@
 
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Image Source="inserir"/>
-                <Button x:Name="botao_cadastrar" Text="Cadastrar" HorizontalOptions="FillAndExpand" />
-
+                <ImageButton Source="home" x:Name="botao_home" Clicked="botao_home_Clicked" HeightRequest="150" WidthRequest="150"/>
+                <Label Text="Home"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Image Source="localizar"/>

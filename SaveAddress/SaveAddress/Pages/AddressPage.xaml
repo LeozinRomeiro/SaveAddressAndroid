@@ -1,21 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SaveAddress.Pages.AddressPage">
+             x:Class="SaveAddress.Pages.AddressPage" Title="Listar endereços">
     <ContentPage.Content>
         <StackLayout>
 
             <StackLayout>
-                <ImageButton Source=""/>
+                <Entry x:Name="textobuscado" Keyboard="Plain" Placeholder="Nome do endereço" HorizontalOptions="StartAndExpand"/>
+                <Button x:Name="BotaoProcurar" Text="Procurar" Clicked="BotaoProcurar_Clicked"/>
             </StackLayout>
             
             <StackLayout>
-                <ListView x:Name="ListAddress" HasUnevenRows="True" SeparatorColor="Red" Margin="15" ItemSelected="ListAddress_ItemSelected">
+                <ListView x:Name="ListAddress" HasUnevenRows="True" SeparatorColor="Black" Margin="15" ItemSelected="ListAddress_ItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
-                                    <Label Text="{Binding Titulo,StringFormat='Título: {0}'}"/>
+                                    <Label Text="{Binding Nome,StringFormat='Nome: {0}'}"/>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

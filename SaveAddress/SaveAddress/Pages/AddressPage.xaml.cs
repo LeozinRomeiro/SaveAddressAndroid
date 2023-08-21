@@ -25,16 +25,21 @@ namespace SaveAddress.Pages
 
         public void AtualizaLista()
         {
-            string Nome = "";
-            //if (txtNota.Text != null) Nome = txtNota.Text;
-            var teste = dataBase.Procurar(Nome);
-            ListAddress.ItemsSource = teste;
-            DisplayAlert("Teste", teste.ToString(), "Ok");
+            string nome = "";
+            if (textobuscado.Text != null) nome = textobuscado.Text;
+            ListAddress.ItemsSource = dataBase.Procurar(nome);
+            //DisplayAlert("Teste", teste.ToString(), "Ok");
         }
 
-        private void ListAddress_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void ListAddress_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Localizacao localizacao = (Localizacao)ListAddress.SelectedItem;
+            await ((MainPage)Application.Current.MainPage).Mostrar(localizacao);
+        }
+
+        private void BotaoProcurar_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

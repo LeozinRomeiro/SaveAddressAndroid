@@ -31,14 +31,14 @@ namespace SaveAddress.Pages
 		{
             try
             {
-                //var coordenadas = await Geolocation.GetLastKnownLocationAsync();
+                var coordenadas = await Geolocation.GetLastKnownLocationAsync();
                 
                 Localizacao localizacao = new Localizacao();
-                //localizacao.Longitude = coordenadas.Longitude.ToString();
-                //localizacao.Latitude = coordenadas.Latitude.ToString();
-                localizacao.Latitude = "37.423_617";
-                localizacao.Longitude = "-122.084_059";
-                localizacao.Nome = textoNome.Text;
+                localizacao.Longitude = coordenadas.Longitude;
+                localizacao.Latitude = coordenadas.Latitude;
+                //localizacao.Latitude = -23.451808;
+                //localizacao.Longitude = -52.036737;
+                DataBaseClass.Inserir(localizacao);
                 await DisplayAlert("Teste", localizacao.Nome, "Ok");
             }
             catch (Exception ex)
