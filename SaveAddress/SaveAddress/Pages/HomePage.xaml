@@ -7,5 +7,12 @@
             <Entry x:Name="textoNome" />
             <Button x:Name="Salvar" Clicked="Salvar_Clicked" Text="Salvar"/>
         </StackLayout>
+        <!--<StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Mapa" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                
+            </Frame>
+            <maps:Map IsShowingUser="True"/>
+        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>

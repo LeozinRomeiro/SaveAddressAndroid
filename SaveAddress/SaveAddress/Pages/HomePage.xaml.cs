@@ -29,13 +29,22 @@ namespace SaveAddress.Pages
         }
         public async void SalvarLocalizacao()
 		{
+           
+
+
+        }
+
+        async void Salvar_Clicked(object sender, EventArgs e)
+        {
             try
             {
-                var coordenadas = await Geolocation.GetLastKnownLocationAsync();
-                
+                var coordenadas = await Geolocation.GetLocationAsync(new GeolocationRequest()
+                { DesiredAccuracy = GeolocationAccuracy.Best });
+
                 Localizacao localizacao = new Localizacao();
                 localizacao.Longitude = coordenadas.Longitude;
                 localizacao.Latitude = coordenadas.Latitude;
+                localizacao.Nome = textoNome.Text;
                 //localizacao.Latitude = -23.451808;
                 //localizacao.Longitude = -52.036737;
                 DataBaseClass.Inserir(localizacao);
@@ -45,14 +54,6 @@ namespace SaveAddress.Pages
             {
                 await DisplayAlert("Falhou", ex.Message, "OK");
             }
-
-
-        }
-
-        private void Salvar_Clicked(object sender, EventArgs e)
-        {
-            SalvarLocalizacao();
-            
         }
     }
 }
