@@ -37,9 +37,20 @@ namespace SaveAddress.Pages
             await ((MainPage)Application.Current.MainPage).Mostrar(localizacao);
         }
 
-        private void BotaoProcurar_Clicked(object sender, EventArgs e)
+        private void mapa_Clicked(object sender, EventArgs e)
         {
 
+        }
+
+        private void editar_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Procurar_Clicked(object sender, EventArgs e)
+        {
+            string nome = textobuscado.Text;
+            ListAddress.ItemsSource = dataBase.Procurar(nome);
         }
     }
 }

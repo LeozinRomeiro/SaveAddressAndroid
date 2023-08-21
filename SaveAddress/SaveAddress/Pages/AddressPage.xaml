@@ -1,22 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SaveAddress.Pages.AddressPage" Title="Listar endereços">
+             x:Class="SaveAddress.Pages.AddressPage" Title="Listar endereços" >
     <ContentPage.Content>
         <StackLayout>
 
             <StackLayout>
-                <Entry x:Name="textobuscado" Keyboard="Plain" Placeholder="Nome do endereço" HorizontalOptions="StartAndExpand"/>
-                <Button x:Name="BotaoProcurar" Text="Procurar" Clicked="BotaoProcurar_Clicked"/>
+                <Entry x:Name="textobuscado" Keyboard="Plain" Placeholder="Digite o nome do endereço" HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Start">
+                <ImageButton Source="editar" x:Name="editar" Clicked="editar_Clicked" HeightRequest="80" WidthRequest="80" BackgroundColor="Transparent"/>
+                <Label Text="Editar"/>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="End">
+                <ImageButton Source="procurar" x:Name="Procurar" Clicked="Procurar_Clicked" HeightRequest="80" WidthRequest="80"/>
+                <Label Text="Procurar"/>
             </StackLayout>
             
+
+            <Label Text="Clique no endereço que ver no mapa" HorizontalOptions="Center"/>
             <StackLayout>
                 <ListView x:Name="ListAddress" HasUnevenRows="True" SeparatorColor="Black" Margin="15" ItemSelected="ListAddress_ItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout>
-                                    <Label Text="{Binding Nome,StringFormat='Nome: {0}'}"/>
+                                <StackLayout BackgroundColor="Transparent">
+                                    <Label Text="{Binding Nome,StringFormat='Nome do endereço: {0}'}"/>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

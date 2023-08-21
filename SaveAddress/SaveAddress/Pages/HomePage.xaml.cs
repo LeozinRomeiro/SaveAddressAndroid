@@ -21,7 +21,6 @@ namespace SaveAddress.Pages
 		public HomePage()
 		{
 			InitializeComponent();
-            DisplayAlert("Teste", "teste", "Ok");
 		}
         protected override void OnAppearing()
         {
@@ -48,7 +47,7 @@ namespace SaveAddress.Pages
                 //localizacao.Latitude = -23.451808;
                 //localizacao.Longitude = -52.036737;
                 DataBaseClass.Inserir(localizacao);
-                await DisplayAlert("Teste", localizacao.Nome, "Ok");
+                await DisplayAlert("Sucesso!", "Seu endereço "+localizacao.Nome+" foi adicionado com sucesso.", "Ok");
             }
             catch (Exception ex)
             {

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SaveAddress.Pages.HomePage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Indique o nome que deseja salvar" HorizontalOptions="CenterAndExpand" BackgroundImageSource="fundo"/>
             <Entry x:Name="textoNome" />
             <Button x:Name="Salvar" Clicked="Salvar_Clicked" Text="Salvar"/>
         </StackLayout>
