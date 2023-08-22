@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SaveAddress.Pages.HomePage">
+             x:Class="SaveAddress.Pages.HomePage" BackgroundImageSource="fundo">
     <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Salvo seu endereço atual, apenas indique o nome que deseja."
+        </StackLayout>
+        
         <StackLayout VerticalOptions="CenterAndExpand">
-            <Label Text="Indique o nome que deseja salvar" HorizontalOptions="CenterAndExpand" BackgroundImageSource="fundo"/>
-            <Entry x:Name="textoNome" />
+            <Label Text="Indique o nome do endereço que deseja salvar" HorizontalOptions="Center" BackgroundColor="White" TextColor="Black"/>
+            <Entry x:Name="textoNome" BackgroundColor="White" TextColor="Black"/>
             <Button x:Name="Salvar" Clicked="Salvar_Clicked" Text="Salvar"/>
         </StackLayout>
         <!--<StackLayout>
