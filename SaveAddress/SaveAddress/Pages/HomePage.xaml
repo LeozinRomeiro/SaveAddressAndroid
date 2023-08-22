@@ -4,7 +4,7 @@
              x:Class="SaveAddress.Pages.HomePage" BackgroundImageSource="fundo">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Salvo seu endereço atual, apenas indique o nome que deseja."
+            <Label Text="Salvo seu endereço atual, apenas indique o nome que deseja."/>
         </StackLayout>
         
         <StackLayout VerticalOptions="CenterAndExpand">
