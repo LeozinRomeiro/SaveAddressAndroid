@@ -6,6 +6,6 @@ namespace SaveAddress.DataBase
 {
     public class MySQLConexao
     {
-        static string Connetion
+        static string Connetion;
     }
 }
