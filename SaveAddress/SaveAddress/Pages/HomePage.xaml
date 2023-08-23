@@ -4,14 +4,17 @@
              x:Class="SaveAddress.Pages.HomePage" BackgroundImageSource="fundo">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Salvo seu endereço atual, apenas indique o nome que deseja."/>
+            <StackLayout>
+                <Label Text="Salvo seu endereço atual, apenas indique o nome que deseja."/>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label Text="Indique o nome do endereço que deseja salvar" HorizontalOptions="Center" BackgroundColor="White" TextColor="Black"/>
+                <Entry x:Name="textoNome" BackgroundColor="White" TextColor="Black"/>
+                <Button x:Name="Salvar" Clicked="Salvar_Clicked" Text="Salvar"/>
+            </StackLayout>
         </StackLayout>
         
-        <StackLayout VerticalOptions="CenterAndExpand">
-            <Label Text="Indique o nome do endereço que deseja salvar" HorizontalOptions="Center" BackgroundColor="White" TextColor="Black"/>
-            <Entry x:Name="textoNome" BackgroundColor="White" TextColor="Black"/>
-            <Button x:Name="Salvar" Clicked="Salvar_Clicked" Text="Salvar"/>
-        </StackLayout>
         <!--<StackLayout>
             <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
                 <Label Text="Mapa" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
